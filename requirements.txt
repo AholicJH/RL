@@ -1,0 +1,16 @@
+###### Requirements without Version Specifiers ######
+numpy
+scipy
+cloudpickle
+pandas
+matplotlib
+psutil
+catkin_pkg
+rospkg
+empy
+defusedxml
+
+###### Requirements with Version Specifiers ######
+stable_baselines3==1.3.0
+gym==0.17.3
+tensorboard>=2.2.0
