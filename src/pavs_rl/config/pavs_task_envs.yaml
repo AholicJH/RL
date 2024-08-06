@@ -1,0 +1,75 @@
+# 小车的配置文件示例
+car:
+  #--- Task Related parameters
+  n_actions: 3  # 例如，小车的动作可以是速度和转向等参数
+  n_observations: 3  # 例如，小车的观测可以是位置和速度等参数
+  max_steps: 10000
+
+  #-----------------------------------------------------------------------------------------#
+  #--- Action Space
+
+  # Define min and max values for actions (e.g., speed and steering)
+  min_actions:
+    - -1.0  # 最小速度
+    - -1.0  # 最小转向角度
+    - 0.0   # 其他动作的最小值
+  max_actions:
+    - 1.0   # 最大速度
+    - 1.0   # 最大转向角度
+    - 1.0   # 其他动作的最大值
+
+  #-----------------------------------------------------------------------------------------#
+  #--- Observation Space
+
+  # Set maximum and minimum values for observations (e.g., position and velocity)
+  position_max:
+    x: 10.0  # 最大X位置
+    y: 10.0  # 最大Y位置
+    z: 5.0   # 最大Z位置
+  position_min:
+    x: -10.0  # 最小X位置
+    y: -10.0  # 最小Y位置
+    z: 0.0    # 最小Z位置
+
+  velocity_max:
+    x: 5.0  # 最大X速度
+    y: 5.0  # 最大Y速度
+    z: 2.0  # 最大Z速度
+  velocity_min:
+    x: -5.0  # 最小X速度
+    y: -5.0  # 最小Y速度
+    z: -2.0  # 最小Z速度
+
+  #-----------------------------------------------------------------------------------------#
+  #--- Simulation parameters
+
+  time_step: 0.01  # 时间步长
+  update_rate_multiplier: 10.0  # 如果进行训练，最大更新速率乘以这个数值
+
+  #-----------------------------------------------------------------------------------------#
+  #--- Goal Position
+
+  goal_position:
+    x: 50.0  # 目标位置X
+    y: 20.0  # 目标位置Y
+    z: 0.0   # 目标位置Z
+
+  goal_tolerance: 0.1  # 目标位置容忍度
+
+  training: True
+  pos_dynamic: False
+  pos_dynamic_params:
+    x_max_amplitude: 0.2
+    y_max_amplitude: 0.2
+    z_max_amplitude: 0.1
+    x_max_freq: 0.02
+    y_max_freq: 0.02
+    z_max_freq: 0.01
+
+  #-----------------------------------------------------------------------------------------#
+  #--- Reward-related variables
+
+  step_reward: -0.01  # 每步的惩罚
+  multiplier_dist_reward: 1.0  # 距离奖励的乘数
+  reached_goal_reward: 100  # 达到目标的奖励
+  joint_limits_reward: -10.0  # 关节限制的惩罚

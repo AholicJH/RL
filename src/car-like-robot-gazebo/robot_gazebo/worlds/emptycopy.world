@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Red object -->
+    <model name="red_object">
+      <pose>0 0 0 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Blue object -->
+    <model name="blue_object">
+      <pose>2 2 0 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>0.5</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Green object -->
+    <model name="green_object">
+      <pose>4 4 0 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.5</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0 1 0 1</ambient>
+            <diffuse>0 1 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Purple circles -->
+    <model name="purple_circle_1">
+      <pose>-2 -2 0 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>0.3</radius>
+              <length>0.1</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.5 0 0.5 1</ambient>
+            <diffuse>0.5 0 0.5 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="purple_circle_2">
+      <pose>1 -3 0 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>0.3</radius>
+              <length>0.1</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.5 0 0.5 1</ambient>
+            <diffuse>0.5 0 0.5 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Add more purple circles as needed -->
+
+  </world>
+</sdf>

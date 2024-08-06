@@ -1,0 +1,5 @@
+<launch>
+
+    <node name="pavs_task_env" pkg="pavs_rl" type="task_env_pavs.py" output="screen" />
+
+</launch>

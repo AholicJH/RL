@@ -1,0 +1,8 @@
+<launch>
+    <group ns="/pav_s00">
+    <node name="gazebo_manager_node" pkg="robot_gazebo" type="gazebo_manager_node" output="screen"/>
+    </group>
+    <node name="pavs_train_env" pkg="pavs_rl" type="pavs_train_env.py" output="screen" />
+     <!-- Spawn Velodyne LIDAR in Gazebo -->
+    <!-- <node name="spawn_velodyne" pkg="gazebo_ros" type="spawn_model" args="-file $(find velodyne_description)/urdf/VLP-16.urdf.xacro -urdf -model velodyne" /> -->
+</launch>

@@ -1,0 +1,5 @@
+<launch>
+
+    <node name="test_env_pavs" pkg="pavs_rl" type="test_env_pavs.py" output="screen" />
+
+</launch>

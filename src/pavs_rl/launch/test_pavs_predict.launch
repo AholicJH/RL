@@ -1,0 +1,6 @@
+<launch>
+    <group ns="/pav_s03">
+    <node name="gazebo_manager_node" pkg="robot_gazebo" type="gazebo_manager_node"/>
+    </group>
+    <node name="test_pavs_RL_predict" pkg="pavs_rl" type="test_pavs_RL_predict.py" output="screen"/>
+</launch>

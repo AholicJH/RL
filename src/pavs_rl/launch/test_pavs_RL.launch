@@ -1,0 +1,12 @@
+<launch>
+    <group ns="/pav_s03">
+    <node name="gazebo_manager_node" pkg="robot_gazebo" type="gazebo_manager_node"/>
+    </group>
+    <node name="test_pavs_RL" pkg="pavs_rl" type="test_pavs_RL.py" output="screen"/>
+      <!-- <group ns="/pav_s01">
+    <node name="gazebo_manager_node" pkg="robot_gazebo" type="gazebo_manager_node" output="screen"/>
+    </group>
+    <node name="test_pavs_RL" pkg="pavs_rl" type="test_pavs_RL.py" output="screen" /> -->
+     <!-- Spawn Velodyne LIDAR in Gazebo -->
+    <!-- <node name="spawn_velodyne" pkg="gazebo_ros" type="spawn_model" args="-file $(find velodyne_description)/urdf/VLP-16.urdf.xacro -urdf -model velodyne" /> -->
+</launch>

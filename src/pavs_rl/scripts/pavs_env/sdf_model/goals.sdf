@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<sdf version='1.6'>
+    <model name='virtual_goal'>
+        <static>true</static>
+        <pose>0 0 0 0 0 0</pose>
+        <link name='link'>
+            <visual name='visual'>
+                <geometry>
+                    <cylinder>
+                        <radius>0.5</radius>
+                        <length>0.4</length>
+                    </cylinder>
+                </geometry>
+                <material>
+                    <ambient>0 1 0 0.5</ambient>
+                    <diffuse>0 1 0 0.5</diffuse>
+                </material>
+            </visual>
+        </link>
+    </model>
+</sdf>
